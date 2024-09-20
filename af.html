@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30;
+            padding: 50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, rgb(244, 62, 62), rgb(153, 169, 227));
+        }
+
+    
+        .feedback-form {
+            background-color: rgba(255, 255, 255, 0.818);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            box-sizing:0px;
+        }
+
+        
+        .feedback-form h2 {
+            text-align: center;
+            margin-bottom: 1px;
+            color: #333;
+        }
+
+        
+        label {
+            display: block;
+            margin-bottom: 1px;
+            font-weight: bold;
+        }
+
+        
+        input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="url"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+    
+        .rating-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .rating-options label {
+            font-weight: normal;
+        }
+
+        
+        .terms {
+            margin-bottom: 15px;
+        }
+
+        /* Submit Button */
+        button[type="submit"] {
+            width: 30%;
+            padding: 10px;
+            background-color: #09ae2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            justify-content: center;
+            display : center;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0cb93a;
+        
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        
+        
+        <form>
+            <!-- Feedback Type -->
+            <label for="feedback-type">Feedback Type:</label>
+            <input type="text" id="feedback-type" value="Compliment">
+
+            <!-- Message -->
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4"></textarea>
+
+            <!-- Website Rating -->
+            <label for="rating">Website Rating:</label>
+            <div class="rating-options">
+                <label><input type="radio" name="rating" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="rating" value="Good"> Good</label>
+                <label><input type="radio" name="rating" value="Average"> Average</label>
+                <label><input type="radio" name="rating" value="Poor"> Poor</label>
+            </div>
+
+            <!-- Age -->
+            <label for="age">Age (10-100):</label>
+            <input type="number" id="age" min="10" max="100">
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <!-- Password -->
+            <label for="password">Password (min. 8 characters):</label>
+            <input type="password" id="password" minlength="8">
+
+            <!-- Website URL (optional) -->
+            <label for="website">Website URL (optional):</label>
+            <input type="url" id="website">
+
+            <!-- Terms and Conditions -->
+            <div class="terms">
+                <label><input type="checkbox" id="terms"> I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
